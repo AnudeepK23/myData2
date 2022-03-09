@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc() {
+                document.getElementById('s1').innerText='hello';
+        }
+
+        function calculateadd() {
+            var a=parseInt(document.f1.n1.value);
+            var b=parseInt(document.f1.n2.value);
+            document.getElementById("s2").innerText=a+b;
+        }
+        function calculatesub() {
+            var a=parseInt(document.f1.n1.value);
+            var b=parseInt(document.f1.n2.value);
+            document.getElementById("s3").innerText=a-b;
+        }
+        function calculatemul() {
+            var a=parseInt(document.f1.n1.value);
+            var b=parseInt(document.f1.n2.value);
+            document.getElementById("s4").innerText=a*b;
+        }
+        function calculatediv() {
+            var a=parseInt(document.f1.n1.value);
+            var b=parseInt(document.f1.n2.value);
+            document.getElementById("s5").innerText=a/b;
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1> inner html and inner text </h1>
+        <hr>
+    <span id="s1"> Hello Everyone </span>    
+    <button onclick="abc()">change</button>
+    <hr>
+    <form name="f1">
+        value 1 :<input type="number" name="n1" #v1><br>
+        value 2 :<input type="number" name="n2" #v2><br>
+        <input type="button" value="add" onclick="calculateadd()" >
+        <input type="button" value="sub" onclick="calculatesub()" >
+        <input type="button" value="mul" onclick="calculatemul()" >
+        <input type="button" value="div" onclick="calculatediv()" >
+    </form>
+    <h3> result of add ::<span id=s2>  </span>
+    </h3>
+    <h3> result of sub ::<span id=s3>  </span>
+    </h3>
+    <h3> result of mul ::<span id=s4>  </span>
+    </h3>
+    <h3> result of div ::<span id=s5>  </span>
+    </h3>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+		 var Students = [{
+'name': 'Anudeep',
+'isGeg': true,
+'age': 22,
+'marks':[
+{ 'english': 89 },
+{ 'maths' : 90 },
+{ 'science' : 98 },
+{ 'kannada' : 99 },
+{ 'hindi' : 90 }
+]
+},
+{
+'name': 'Reddy',
+'isGeg': true,
+'age': 24,
+'marks':[
+{ 'physics': 78 },
+{ 'maths' : 90 },
+{ 'science' : 98 },
+{ 'kannada' : 99 },
+{ 'chemistry' : 89 }
+]
+}
+]
+console.log(Students);
+console.log('Name is : ' + Students[0].name);
+console.log('Age is:' + Students[1].age);
+console.log('Maths marks is:' + Students[0].marks[1].maths);
+console.log('chemistry marks is:' + Students[1].marks[4].chemistry);
+console.log('kannada marks is:' + Students[0].marks[3].kannada);
+console.log('science marks is:' + Students[0].marks[2].science);
+console.log('english marks is:' + Students[0].marks[0].english);
+
+
+for(var i=0;i<Students.length; i++){
+console.log('Name is : ' + Students[i].name);
+console.log('Age is:' + Students[i].age);
+console.log('Maths marks is:' + Students[0].marks[1].maths);
+console.log('chemistry marks is:' + Students[1].marks[4].chemistry);
+console.log('kannada marks is:' + Students[0].marks[3].kannada);
+console.log('science marks is:' + Students[0].marks[2].science);
+console.log('english marks is:' + Students[0].marks[0].english);
+}
+
+//console.log('marks is:' + Student.marks);
+
+	</script>
+</body>
+</html>
