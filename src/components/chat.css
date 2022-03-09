@@ -1,0 +1,31 @@
+.back{
+    /* padding: 10px,10px,10px,10px; */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT88tdgbJDIN9J2QeeVpTLKKy4aF0KCec553A&usqp=CAU");
+   
+   
+    /* background-image: url("https://st.depositphotos.com/1725337/1257/i/600/depositphotos_12579771-stock-photo-red-question.jpg"); */
+
+    /* background-image: url("https://media.istockphoto.com/vectors/thinking-emoticon-question-face-emoji-with-eyeglasses-vector-vector-id1310060658?k=20&m=1310060658&s=612x612&w=0&h=xinMMHOLWfxXU-8zDafFNH4nOjlGaj9dytP9wlXTORM="); */
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghVnPtmkG5EmX7xJknVYDoMxmojXCKlD4cA&usqp=CAU"); */
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGHftq65y-qZs7c1SyYrOKUXJ22scCFX02Q&usqp=CAU"); */
+    background-attachment: fixed;
+}
+
+.head{
+    text-align: center;
+    color:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    font-size: 50px;
+    font-style:italic;
+}
+
+#fig{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGHftq65y-qZs7c1SyYrOKUXJ22scCFX02Q&usqp=CAU");
+}
+
+#gr{
+    background-color: #96CEB4;
+}
