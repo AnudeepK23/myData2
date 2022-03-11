@@ -1,0 +1,33 @@
+.form-group{
+    margin: 100px;
+    border-right: 1px solid black;
+    padding: 50px;
+   }
+   
+   img{
+    margin: 100px;
+    padding: 50px 50px 50px 10px;
+   }
+   
+   input,label{
+    padding: 5px;
+   }
+   button{
+    float: right;
+   }
+
+   .tree{
+
+    height: 150vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #B983FF;
+   /* background-image: url("https://www.teahub.io/photos/full/223-2236998_arizona-4k.jpg"); */
+  /* background-image: url("https://rukminim1.flixcart.com/image/416/416/k0zlsi80/poster/m/m/u/large-green-city-on-earth-beautiful-sticker-poster-save-earth-original-imafkntrmmmyvgzc.jpeg?q=70"); */
+    background-attachment: fixed;
+   text-align: center;
+   
+   }
+   /* .tree{
+       background-image:url ("https://assets.change.org/photos/2/wv/px/RZwVpXOscJviaSZ-800x450-noPad.jpg?1606114091");
+   } */

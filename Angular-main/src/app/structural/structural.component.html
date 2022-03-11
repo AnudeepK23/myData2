@@ -1,0 +1,56 @@
+<h2>*ngFor</h2>
+
+<h2>
+    <ul>
+        <li *ngFor='let i of bevrages'>{{i}}</li>
+    </ul>
+</h2>
+
+<h2>*ngFor</h2>
+
+<h2>
+    <!-- <li *ngFor="let json1 of json">{{json1.name1+" "+json1.age1+" "+json1.salary1}}</li>     -->
+    <ul>
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                </tr>
+                
+                    <tr *ngFor="let json1 of json"><td>{{json1.name}}</td><td>{{json1.age}}</td><td>{{json1.salary}}</td></tr>
+                
+                    <!-- <td>{{json.name1}}</td>
+                    <td>{{json.</td> -->
+                    
+                
+       
+       
+        </table>
+    </ul>
+    
+</h2>
+
+<div *ngIf="true"><p>demo text</p></div>
+
+
+<ng-container *ngIf="true; else elseTemplate">
+    <h1>demo text for true</h1>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <h1>demo text for false</h1>
+    </ng-template>
+    
+
+
+    <div [ngSwitch]="option">
+        <p *ngSwitchCase="1"><strong>Hai</strong></p>
+            <p *ngSwitchCase="2"><strong>Hello</strong></p>
+                <p *ngSwitchCase="3"><strong>Good</strong></p>
+                    <p *ngSwitchCase="4"><strong>How are you</strong></p>
+                        <p *ngSwitchCase="5"><strong>Bye</strong></p>
+           
+           
+           
+            <p *ngSwitchDefault>Default Code</p>
+    </div>

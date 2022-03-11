@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>Structural Directive</h1>
+    <app-structural></app-structural>
+  </div>
+
+  <hr>
+  <div >
+    <input type="button" (click)="change()" value="change">
+  </div>
+  <ng-container *ngIf="flag; else elseTemplate">
+  <h1>Attribute Directive</h1>
+
+
+<app-attribute></app-attribute>
+</ng-container>
+<ng-template #elseTemplate>
+  <h2>no content</h2>
+</ng-template>
+
+
+
+
+</body>
+</html>
+
+
+
