@@ -20,7 +20,7 @@ class register extends Component {
     handleSubmit = event => {
         event.preventDefault()
         console.log(this.state);
-        axios.post("http://localhost:8080/register", this.state)
+        axios.post("http://localhost:9092/saveUsr", this.state)
             .then(res => {
                 console.log(res.data)
                 console.log("user registered successfully!!!!")
@@ -56,7 +56,7 @@ class register extends Component {
                     <div class="mb-3">
                         <label><strong>Password:</strong> </label>
 
-                        <input type="text" placeholder="Enter Password" class="form-control" name="password" value={password} id="pass1" onChange={this.handleChange}
+                        <input type="password" placeholder="Enter Password" class="form-control" name="password" value={password} id="pass1" onChange={this.handleChange}
                             id="pass1" required />
                         <br />
                     </div>
@@ -75,7 +75,8 @@ class register extends Component {
                             required />
                         <br />
                     </div>
-                    <input type="submit" value="SIGNUP" />     |  <input type="reset" value="Reset" />
+                    <input type="submit" value="SIGNUP" />
+                    <input type="reset" value="reset" />
                 </form>
             </div>
 

@@ -1,45 +1,69 @@
 import React, { Component } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 import axios from 'axios';
+import { BrowserRouter as Router, Switch, Route, Redirect, } from "react-router-dom"
+import Home from "./Home"
 
+class Login extends Component {
 
-class login extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
+
+            redirect: false,
             email: '',
             password: '',
-            msg: '',
-
-
-
         }
+
     }
+    // onChange = (e) => {
+    //     e.preventDefault();
+    //     this.setState({ email: e.target.value })
+    // }
     handleChange = (event) => {
+
         this.setState({ [event.target.name]: event.target.value })
     }
-    handleSubmit = event => {
+    handleSubmit = (event) => {
 
-        event.preventDefault()
+        event.preventDefault();
+
         console.log(this.state);
-        axios.post("http://localhost:8080/login", this.state)
-            .then(res => {
-                console.log(res.data)
-                console.log("user logged successfully!!!!")
-                this.msg = `user logged succesfully`;
-                alert("user logged succesfully");
 
+
+        axios.post("http://localhost:9092/login", this.state)
+
+            .then(res => {
+                this.setState({ redirect: true });
+
+                console.log(res.data.email)
+                console.log(res.data)
+
+                // try {
+                // this.props.GreetHandler(this.state);
+                // }
+                // catch (e) {
+                //     console.log("error")
+                // }
+
+                alert("user logged succesfully");
 
 
             })
             .catch(err => {
                 console.log(console.err)
-                console.log("invalid credentials")
+
                 alert("invalid credentials!!")
             })
     }
+
     render() {
-        const { email, password, } = this.state
+        const { redirect } = this.state;
+        if (redirect) {
+            return <Redirect to="/home" />;
+
+        }
+        const { email, password } = this.state
         return (
             <div>
                 <section className="vh-100">
@@ -81,6 +105,7 @@ class login extends Component {
                                             onChange={this.handleChange}
                                             className="form-control form-control-lg"
                                             placeholder="Enter a valid email address"
+                                        // onChange={this.onChange}
                                         />
                                         <label className="form-label" htmlFor="form3Example3">
                                             Email address
@@ -120,8 +145,8 @@ class login extends Component {
                                         <input
                                             type="submit"
                                             name="login"
-                                            value="login"
-                                            onSubmit={this.handleSubmit}
+
+
 
                                             className="btn btn-primary btn-lg"
                                             style={{ paddingLeft: "2.5rem", paddingRight: "2.5rem" }}
@@ -162,9 +187,10 @@ class login extends Component {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div >
         )
     }
 
 }
-export default login
+
+export default Login

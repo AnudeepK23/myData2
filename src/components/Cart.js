@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Button, Row, Col, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { ProductConsumer } from '../contextAPI'
-import './Cart.css';
 
 export default class Cart extends Component {
     render() {
@@ -65,17 +64,13 @@ export default class Cart extends Component {
                                             </div>
                                         )
                                     })}
-                                     
-                                    <hr>
-                                   </hr>
-                                   <div >
-                                    <Container >
+                                    <hr></hr>
+                                    <Container>
                                         <Row>
-                                            <Col ><strong >Total:</strong>{value.CartSubTotal}</Col>
+                                            <Col><strong>Total:</strong>{value.CartSubTotal}</Col>
                                         </Row>
-                                        <div ><NavLink to={`/payment`}><input type="button" value="checkout" className='cc'></input></NavLink></div>
+                                        <div><NavLink to={`/payment`}><input type="button" value="checkout"></input></NavLink></div>
                                     </Container>
-                                    </div>
 
                                 </div>
                             )

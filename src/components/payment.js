@@ -51,7 +51,7 @@ const Payment = () => {
                                                     </label> <input type="text" required class="form-control" /> </div>
                                                 </div>
                                             </div>
-                                            <div class="card-footer"><NavLink to={`/Thank`}><button type="button" class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button></NavLink></div>
+                                            <NavLink to="/thank">  <div class="card-footer"> <button type="button" onClick={() => { alert("Payment successfull") }} class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button></div></NavLink>
                                         </form>
                                     </div>
 

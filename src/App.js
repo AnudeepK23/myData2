@@ -9,22 +9,30 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 import home from './components/Home';
 import About from './components/About';
-import login from './components/login';
+
 import register from './components/register'
 import Chat from './components/chat';
 import Payment from './components/payment';
-import Thank from './components/thank';
-import Searchbar from './components/searchbar';
-import Navbar from './components/Navbar';
+import profile from './components/profile';
+
+
+import ResultList from './components/result';
+import Loginn from './components/loginn';
+import Admin from './components/admin';
+import Create from './components/create';
+import Read from './components/read';
+import Update from './components/update';
+import Thank from './components/Thankyou';
+import Searchbar from './components/Searchbar';
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-
-
-{/* <Route path="/" component={Navbar} /> */}
-
-      
       <Route path="/" component={Nav} />
       <Switch>
         <Route exact path="/" component={ProductList} />
@@ -32,22 +40,39 @@ function App() {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/home" component={home} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/login" component={login} />
+
         <Route exact path="/register" component={register} />
         <Route exact path="/support" component={Chat} />
         <Route exact path="/payment" component={Payment} />
-        <Route exact path="/thank" component={Thank} /> 
+        <Route exact path="/profile" component={profile} />
 
-        <Route exact path='/search' component={Searchbar} />
+        <Route exact path="/log" component={Loginn} />
+        <Route exact path="/logpro" component={ResultList} />
+        <Route exact path="/admin" component={Admin} />
 
-      </Switch>
+        <Route exact path='/create' component={Create} />
+
+
+
+        <Route exact path='/read' component={Read} />
+
+
+        <Route path='/update' component={Update} />
+        <Route path="/thank" component={Thank} />
+        <Route path="/search" component={Searchbar} />
+
+
+
+
+
+      </Switch >
 
       <Footer />
 
 
 
 
-    </div>
+    </div >
   );
 }
 
